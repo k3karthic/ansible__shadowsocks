@@ -24,9 +24,9 @@ Public instances are assumed to have a label `shadowsocks_service: yes`.
 
 ## Playbook Configuration
 
-1. Create `inventory/google.gcp_compute.yml` based on `inventory/google.gcp_compute.yml.sample`
+1. Create `inventory/google.gcp_compute.yml` based on `inventory/google.gcp_compute.yml.sample`,
     1. specify the project id
-    1. specify the zone where you have deployed your server on Google Cloud.
+    1. specify the zone where you have deployed your server on Google Cloud
     1. Configure the authentication
 1. Set username and ssh authentication in `inventory/group_vars/all.yml`.
 1. Create the server configuration `files/config.json` using `files/config.json.sample`.
