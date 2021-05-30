@@ -1,0 +1,4 @@
+ssh/google
+ssh/google.pub
+inventory/google.gcp_compute.yml
+files/config.json

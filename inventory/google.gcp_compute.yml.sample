@@ -1,0 +1,13 @@
+---
+plugin: gcp_compute
+
+projects:
+    - <PROJECT_ID>
+
+auth_kind: application
+
+zones:
+    - us-central1-a
+
+filters:
+    - labels.os = "freebsd" AND labels.shadowsocks_service = "yes"

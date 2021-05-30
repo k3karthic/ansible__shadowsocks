@@ -1,0 +1,28 @@
+---
+- name: shadowsocks
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: install shadowsocks
+      community.general.pkgng:
+        name: shadowsocks-libev
+        state: latest
+
+    - name: copy shadowsocks config
+      ansible.builtin.copy:
+        src: config.json
+        dest: /usr/local/etc/shadowsocks-libev/config.json
+        owner: root
+        group: wheel
+        mode: "0644"
+
+    - name: enable shadwsocks on boot
+      community.general.sysrc:
+        name: shadowsocks_libev_enable
+        value: "YES"
+
+    - name: restart shadowsocks
+      ansible.builtin.service:
+        name: shadowsocks_libev
+        state: restarted
