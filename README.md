@@ -1,6 +1,6 @@
 # Ansible - Shadowsocks Proxy
 
-The Ansible playbook in this repository configures a FreeBSD 13 instance to act as a SOCKS proxy for [NetGuard](https://www.netguard.me/) using [SHadowsocks](https://shadowsocks.org/en/index.html).
+The Ansible playbook in this repository configures a FreeBSD 13 instance to act as a SOCKS proxy for [NetGuard](https://www.netguard.me/) using [Shadowsocks](https://shadowsocks.org/en/index.html).
 
 The playbook assumes the instance runs in Google Cloud using the scripts below,
 - [https://github.com/k3karthic/terraform__gcloud-instance](https://github.com/k3karthic/terraform__gcloud-instance)
@@ -30,6 +30,16 @@ Public instances are assumed to have a label `shadowsocks_service: yes`.
     1. Configure the authentication
 1. Set username and ssh authentication in `inventory/group_vars/all.yml`.
 1. Create the server configuration `files/config.json` using `files/config.json.sample`.
+
+## Android Configuration
+
+**Step 1.** Install [Shadowsocks FOSS](https://www.f-droid.org/en/packages/com.gitlab.mahc9kez.shadowsocks.foss/) and allow it to bypass [NetGuard](https://f-droid.org/en/packages/eu.faircode.netguard/) by de-selecting the "Apply rules and conditions" checkbox.
+
+<img src="https://github.com/k3karthic/ansible__shadowsocks/raw/main/resources/shadowsocks_screenshot.jpg" width="500" />
+
+**Step 2.** Save the server configuration as a profile in Shadowsocks FOSS.
+
+<img src="https://github.com/k3karthic/ansible__shadowsocks/raw/main/resources/netguard_screenshot.jpg" width="500" />
 
 ## Deployment
 
