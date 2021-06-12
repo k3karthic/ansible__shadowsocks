@@ -1,6 +1,6 @@
 {
     "server":["0.0.0.0"],
-    "mode":"tcp_only",
+    "mode":"tcp_and_udp",
     "server_port":8388,
     "local_port":1080,
     "password":"<replace with strong password>",
