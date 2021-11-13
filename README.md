@@ -22,9 +22,9 @@ ansible-galaxy collection install google.cloud
 
 ## Dynamic Inventory
 
-This playbook uses the Google [Ansible Inventory Plugin](https://docs.ansible.com/ansible/latest/collections/google/cloud/gcp_compute_inventory.html).
+The Google [Ansible Inventory Plugin](https://docs.ansible.com/ansible/latest/collections/google/cloud/gcp_compute_inventory.html) dynamically populates public FreeBSD instances.
 
-Target public instances must have the label `shadowsocks_service: yes`.
+The target FreeBSD instances must have the label `shadowsocks_service: yes`.
 
 ## Playbook Configuration
 
