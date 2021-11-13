@@ -1,6 +1,6 @@
 # Ansible - Shadowsocks Proxy
 
-The Ansible playbook in this repository configures a FreeBSD 13 instance to act as a SOCKS proxy for [NetGuard](https://www.netguard.me/) using [Shadowsocks](https://shadowsocks.org/en/index.html).
+The Ansible playbook in this repository configures a SOCKS proxy for [NetGuard](https://www.netguard.me/). The server runs on [FreeBSD 13](https://www.freebsd.org/) and uses the [Shadowsocks](https://shadowsocks.org/en/index.html) package.
 
 The playbook assumes the instance runs in Google Cloud using the scripts below,
 - [https://github.com/k3karthic/terraform__gcloud-instance](https://github.com/k3karthic/terraform__gcloud-instance)
@@ -18,9 +18,9 @@ ansible-galaxy collection install google.cloud
 
 ## Dynamic Inventory
 
-This playbook uses the Google [Ansible Inventory Plugin](https://docs.ansible.com/ansible/latest/collections/google/cloud/gcp_compute_inventory.html) to populate public FreeBSD instances dynamically.
+This playbook uses the Google [Ansible Inventory Plugin](https://docs.ansible.com/ansible/latest/collections/google/cloud/gcp_compute_inventory.html).
 
-Public instances are assumed to have a label `shadowsocks_service: yes`.
+Target public instances must have the label `shadowsocks_service: yes`.
 
 ## Playbook Configuration
 
@@ -33,13 +33,18 @@ Public instances are assumed to have a label `shadowsocks_service: yes`.
 
 ## Android Configuration
 
-**Step 1.** Install [Shadowsocks FOSS](https://www.f-droid.org/en/packages/com.gitlab.mahc9kez.shadowsocks.foss/) and allow it to bypass [NetGuard](https://f-droid.org/en/packages/eu.faircode.netguard/) by de-selecting the "Apply rules and conditions" checkbox.
+**Step 1.** Install [Shadowsocks FOSS](https://www.f-droid.org/en/packages/com.gitlab.mahc9kez.shadowsocks.foss/). Exempt it in [NetGuard](https://f-droid.org/en/packages/eu.faircode.netguard/) by de-selecting the "Apply rules and conditions" checkbox.
 
-<img src="https://github.com/k3karthic/ansible__shadowsocks/raw/main/resources/shadowsocks_screenshot.jpg" width="500" />
+<img src="resources/shadowsocks_screenshot.jpg" width="500" />
 
 **Step 2.** Save the server configuration as a profile in Shadowsocks FOSS.
 
-<img src="https://github.com/k3karthic/ansible__shadowsocks/raw/main/resources/netguard_screenshot.jpg" width="500" />
+<img src="resources/netguard_screenshot.jpg" width="500" />
+
+## Code Mirrors
+
+* GitHub: [github.com/k3karthic/ansible__shadowsocks/](https://github.com/k3karthic/ansible__shadowsocks/)
+* Codeberg: [codeberg.org/k3karthic/ansible__shadowsocks/](https://codeberg.org/k3karthic/ansible__shadowsocks/)
 
 ## Deployment
 
@@ -50,9 +55,7 @@ Run the playbook using the following command,
 
 ## Encryption
 
-Sensitive files like the Shadowsocks config and SSH private keys are encrypted before being stored in the repository.
-
-You must add the unencrypted file paths to `.gitignore`.
+Encrypt sensitive files (Shadowsocks config, SSH private keys) before saving them. `.gitignore` must contain the unencrypted file paths.
 
 Use the following command to decrypt the files after cloning the repository,
 
