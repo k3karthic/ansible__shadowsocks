@@ -10,6 +10,11 @@ The playbook assumes the instance runs in Google Cloud using the scripts below,
     - GitHub: [github.com/k3karthic/ansible__freebsd-basic](https://github.com/k3karthic/ansible__freebsd-basic)
     - Codeberg: [codeberg.org/k3karthic/ansible__freebsd-basic](https://codeberg.org/k3karthic/ansible__freebsd-basic)
 
+## Code Mirrors
+
+* GitHub: [github.com/k3karthic/ansible__shadowsocks/](https://github.com/k3karthic/ansible__shadowsocks/)
+* Codeberg: [codeberg.org/k3karthic/ansible__shadowsocks/](https://codeberg.org/k3karthic/ansible__shadowsocks/)
+
 ## Requirements
 
 Install the following Ansible modules before running the playbook,
@@ -44,11 +49,6 @@ The target FreeBSD instances must have the label `shadowsocks_service: yes`.
 **Step 2.** Save the server configuration as a profile in Shadowsocks FOSS.
 
 <img src="resources/netguard_screenshot.jpg" width="500" />
-
-## Code Mirrors
-
-* GitHub: [github.com/k3karthic/ansible__shadowsocks/](https://github.com/k3karthic/ansible__shadowsocks/)
-* Codeberg: [codeberg.org/k3karthic/ansible__shadowsocks/](https://codeberg.org/k3karthic/ansible__shadowsocks/)
 
 ## Deployment
 
