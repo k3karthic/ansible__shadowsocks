@@ -40,6 +40,13 @@ The target FreeBSD instances must have the label `shadowsocks_service: yes`.
 1. Set username and ssh authentication in `inventory/group_vars/all.yml`.
 1. Create the server configuration `files/config.json` using `files/config.json.sample`.
 
+## Deployment
+
+Run the playbook using the following command,
+```
+./bin/apply.sh
+```
+
 ## Android Configuration
 
 **Step 1.** Install [Shadowsocks FOSS](https://www.f-droid.org/en/packages/com.gitlab.mahc9kez.shadowsocks.foss/). Exempt it in [NetGuard](https://f-droid.org/en/packages/eu.faircode.netguard/) by de-selecting the "Apply rules and conditions" checkbox.
@@ -49,13 +56,6 @@ The target FreeBSD instances must have the label `shadowsocks_service: yes`.
 **Step 2.** Save the server configuration as a profile in Shadowsocks FOSS.
 
 <img src="resources/netguard_screenshot.jpg" width="500" />
-
-## Deployment
-
-Run the playbook using the following command,
-```
-./bin/apply.sh
-```
 
 ## Encryption
 
