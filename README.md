@@ -17,7 +17,7 @@ The playbook assumes the instance runs in Google Cloud using the scripts below,
 
 ## Requirements
 
-Install the following Ansible modules before running the playbook,
+Install the following before running the playbook,
 ```
 ansible-galaxy collection install community.general
 
