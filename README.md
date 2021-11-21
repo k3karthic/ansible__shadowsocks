@@ -19,10 +19,9 @@ The Ansible playbook in this repository configures a SOCKS proxy for [NetGuard](
 
 Install the following before running the playbook,
 ```
-ansible-galaxy collection install community.general
-
-pip install google-auth requests
-ansible-galaxy collection install google.cloud
+$ ansible-galaxy collection install community.general
+$ pip install google-auth requests
+$ ansible-galaxy collection install google.cloud
 ```
 
 ## Dynamic Inventory
@@ -44,7 +43,7 @@ The target FreeBSD instances must have the label `shadowsocks_service: yes`.
 
 Run the playbook using the following command,
 ```
-./bin/apply.sh
+$ ./bin/apply.sh
 ```
 
 ## Android Configuration
@@ -64,11 +63,11 @@ Encrypt sensitive files (Shadowsocks config, SSH private keys) before saving the
 Use the following command to decrypt the files after cloning the repository,
 
 ```
-./bin/decrypt.sh
+$ ./bin/decrypt.sh
 ```
 
 Use the following command after running terraform to update the encrypted files,
 
 ```
-./bin/encrypt.sh <gpg key id>
+$ ./bin/encrypt.sh <gpg key id>
 ```
