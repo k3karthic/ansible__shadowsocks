@@ -12,8 +12,8 @@ The Ansible playbook in this repository configures a SOCKS proxy for [NetGuard](
 
 ## Code Mirrors
 
-* GitHub: [github.com/k3karthic/ansible__shadowsocks/](https://github.com/k3karthic/ansible__shadowsocks/)
-* Codeberg: [codeberg.org/k3karthic/ansible__shadowsocks/](https://codeberg.org/k3karthic/ansible__shadowsocks/)
+* GitHub: [github.com/k3karthic/ansible__shadowsocks](https://github.com/k3karthic/ansible__shadowsocks/)
+* Codeberg: [codeberg.org/k3karthic/ansible__shadowsocks](https://codeberg.org/k3karthic/ansible__shadowsocks/)
 
 ## Requirements
 
