@@ -48,7 +48,7 @@ $ ./bin/apply.sh
 
 ## Android Configuration
 
-**Step 1.** Install [Shadowsocks FOSS](https://www.f-droid.org/en/packages/com.gitlab.mahc9kez.shadowsocks.foss/). Exempt it in [NetGuard](https://f-droid.org/en/packages/eu.faircode.netguard/) by de-selecting the "Apply rules and conditions" checkbox.
+**Step 1.** Install [Shadowsocks FOSS](https://www.f-droid.org/en/packages/com.gitlab.mahc9kez.shadowsocks.foss/). Exempt it in [NetGuard](https://f-droid.org/en/packages/eu.faircode.netguard/) by de-selecting the “Apply rules and conditions” checkbox.
 
 <img src="resources/shadowsocks_screenshot.jpg" width="500" />
 
