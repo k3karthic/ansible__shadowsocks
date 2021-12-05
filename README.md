@@ -34,7 +34,7 @@ The target FreeBSD instance must have the label `shadowsocks_service: yes`.
     1. Specify the zone where you have deployed your server on Google Cloud
     1. Configure the authentication
 1. Set username and ssh authentication in `inventory/group_vars/all.yml`
-1. Create the server configuration `files/config.json` using `files/config.json.sample`
+1. Set the password in `files/config.json` using `files/config.json.sample`
 
 ## Deployment
 
@@ -49,7 +49,11 @@ $ ./bin/apply.sh
 
 <img src="resources/shadowsocks_screenshot.jpg" width="500" />
 
-**Step 2.** Save the server configuration as a profile in Shadowsocks FOSS.
+**Step 2.** Save the server configuration as a profile in Shadowsocks FOSS,
+* *Server* - Instance hostname
+* *Port* - 8388
+* *Password* - Password set in `files/config.json`
+* *Encrypt Method* - CHACHA20-IETF-POLY1305
 
 <img src="resources/netguard_screenshot.jpg" width="500" />
 
