@@ -1,4 +1,4 @@
-# Ansible — Shadowsocks Proxy
+# Ansible — SOCKS Proxy using Shadowsocks
 
 The Ansible playbook in this repository configures a SOCKS proxy for [NetGuard](https://www.netguard.me/). The server runs on [FreeBSD 13](https://www.freebsd.org/) and uses the [Shadowsocks](https://shadowsocks.org/en/index.html) package.
 
@@ -32,7 +32,15 @@ The target FreeBSD instance must have the label `shadowsocks_service: yes`.
 1. Create `inventory/google.gcp_compute.yml` based on `inventory/google.gcp_compute.yml.sample`,
     1. Specify the project ID
     1. Specify the zone where you have deployed your server on Google Cloud
-    1. Configure the authentication
+    1. Configure the authentication,
+        1. Application Default Credentials (`auth_kind: application`)
+            1. Import credentials from the Google Cloud Environment (e.g, Google Cloud Shell)
+            2. Import credentials from Google Cloud SDK if installed 
+        2. Service Account (`auth_kind: serviceaccount`)
+            1. Use a service account for authentication. Refer [cloud.google.com/docs/authentication/production#create_service_account](https://cloud.google.com/docs/authentication/production#create_service_account).
+            2. Set `service_account_file` to the credential file or `service_account_contents` to the json content
+        3. Machine Account (`auth_kind: machineaccount`)
+            1. When running on Compute Engine, use the service account attached to the instance
 1. Set username and ssh authentication in `inventory/group_vars/all.yml`
 1. Set the password in `files/config.json` using `files/config.json.sample`
 
