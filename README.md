@@ -36,8 +36,8 @@ The target FreeBSD instances must have the label `shadowsocks_service: yes`.
     1. Specify the project ID
     1. Specify the zone where you have deployed your server on Google Cloud
     1. Configure the authentication
-1. Set username and ssh authentication in `inventory/group_vars/all.yml`.
-1. Create the server configuration `files/config.json` using `files/config.json.sample`.
+1. Set username and ssh authentication in `inventory/group_vars/all.yml`
+1. Create the server configuration `files/config.json` using `files/config.json.sample`
 
 ## Deployment
 
