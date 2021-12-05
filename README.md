@@ -2,7 +2,7 @@
 
 The Ansible playbook in this repository configures a SOCKS proxy for [NetGuard](https://www.netguard.me/). The server runs on [FreeBSD 13](https://www.freebsd.org/) and uses the [Shadowsocks](https://shadowsocks.org/en/index.html) package.
 
-**Assumption:** The instance runs in Google Cloud using the script below,
+**Assumption:** Instance is deployed using the Terraform script below,
 - terraform__gcloud-instance
     - GitHub: [github.com/k3karthic/terraform__gcloud-instance](https://github.com/k3karthic/terraform__gcloud-instance)
     - Codeberg: [codeberg.org/k3karthic/terraform__gcloud-instance](https://codeberg.org/k3karthic/terraform__gcloud-instance)
@@ -25,7 +25,7 @@ $ ansible-galaxy collection install google.cloud
 
 The Google [Ansible Inventory Plugin](https://docs.ansible.com/ansible/latest/collections/google/cloud/gcp_compute_inventory.html) populates public FreeBSD instances.
 
-The target FreeBSD instances must have the label `shadowsocks_service: yes`.
+The target FreeBSD instance must have the label `shadowsocks_service: yes`.
 
 ## Playbook Configuration
 
