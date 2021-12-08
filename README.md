@@ -58,10 +58,10 @@ $ ./bin/apply.sh
 <img src="resources/shadowsocks_screenshot.jpg" width="500" />
 
 **Step 2.** Save the server configuration as a profile in Shadowsocks FOSS,
-* *Server* - Instance hostname
-* *Port* - 8388
-* *Password* - Password set in `files/config.json`
-* *Encrypt Method* - CHACHA20-IETF-POLY1305
+* *Server* — Instance hostname
+* *Port* — 8388
+* *Password* — Password set in `files/config.json`
+* *Encrypt Method* — CHACHA20-IETF-POLY1305
 
 <img src="resources/netguard_screenshot.jpg" width="500" />
 
