@@ -6,23 +6,23 @@
   tasks:
     - name: Install shadowsocks
       community.general.pkgng:
-        name: shadowsocks-libev
+        name: shadowsocks-rust
         state: latest
 
     - name: Copy shadowsocks config
       ansible.builtin.copy:
         src: config.json
-        dest: /usr/local/etc/shadowsocks-libev/config.json
+        dest: /usr/local/etc/shadowsocks-rust/config.json
         owner: root
         group: wheel
         mode: "0644"
 
     - name: Enable shadwsocks on boot
       community.general.sysrc:
-        name: shadowsocks_libev_enable
+        name: ssserver_rust_enable
         value: "YES"
 
     - name: Restart shadowsocks
       ansible.builtin.service:
-        name: shadowsocks_libev
+        name: ssserver-rust
         state: restarted
